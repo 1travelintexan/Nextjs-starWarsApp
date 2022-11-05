@@ -1,26 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Geostar&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: "Geostar", cursive; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background: black;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#home {
+  color: rgb(2, 167, 68);
+  font-size: 3rem;
+  position: absolute;
+  top: 0px;
+  left: 20px;
 }
 
-* {
-  box-sizing: border-box;
+.heading {
+  color: rgb(227, 227, 227);
+  font-family: "Geostar", cursive;
+  font-size: 4.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+#links-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links {
+  color: rgb(129, 255, 255);
+  text-shadow: 0 0 50px rgb(129, 255, 255);
+  font-size: 3rem;
+}
+
+.character {
+  font-size: 2rem;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.films-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.films-container h4 {
+  font-size: 1.6rem;
+  width: 60%;
+  text-align: center;
+}
+
+.plant-desc {
+  font-size: 2rem;
+}
+.planets-container {
+  width: 80%;
+  border: 2px solid gray;
+  margin: 10px;
+  padding-left: 20px;
 }
