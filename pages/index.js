@@ -11,7 +11,7 @@ export default function Home() {
       <main>
         <h1 className="heading">{"Who doesn't love Star Wars"}</h1>
         <div id="links-div">
-          <Link href={"/charactersPage"}>
+          <Link href={"/characters"}>
             <h2 className="links">Get Characters</h2>
           </Link>
           <Link href={"/films"}>

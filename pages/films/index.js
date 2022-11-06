@@ -1,14 +1,20 @@
 import axios from "axios";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { v4 } from "uuid";
+
 export default function Films() {
   const [films, setFilms] = useState(null);
   useEffect(() => {
     const handleApi = async () => {
       const films = await axios.get("https://swapi.dev/api/films");
-      //let characters = await data.json();
-      console.log("data", films.data);
-      setFilms(films.data.results);
+      let filmsIdArr = films.data.results.map((film) => {
+        let splitArr = film.url.split("/");
+        let filmId = splitArr[splitArr.length - 2];
+        return { title: film.title, id: filmId, opening: film.opening_crawl };
+      });
+      console.log("films", filmsIdArr);
+      setFilms(filmsIdArr);
     };
     handleApi();
   }, []);
@@ -19,11 +25,11 @@ export default function Films() {
       {films &&
         films.map((film, i) => {
           return (
-            <div key={film.title + i} className="films-container">
-              <Link href={`/${film.episode_id}/detail`}>
+            <div key={v4()} className="films-container">
+              <Link href={`films/${film.id}/`}>
                 <h2 className="links">{film.title}</h2>
               </Link>
-              <h4>{film.opening_crawl}</h4>
+              <h4>{film.opening}</h4>
             </div>
           );
         })}

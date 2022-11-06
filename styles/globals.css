@@ -1,29 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Geostar&display=swap");
-html,
 body {
   padding: 0;
-  margin: 0;
+  margin-top: 0px;
   /* font-family: "Geostar", cursive; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: white;
-  background: black;
+  background-image: url("/space-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #home {
-  color: rgb(2, 167, 68);
-  font-size: 3rem;
+  color: rgb(77, 166, 244);
+  text-shadow: 0 0 30px rgb(238, 255, 255);
+  font-size: 2rem;
   position: absolute;
-  top: 0px;
-  left: 20px;
+  top: 30px;
+  left: 50px;
+  text-align: center;
+  padding: 0;
 }
 
 .heading {
   color: rgb(227, 227, 227);
   font-family: "Geostar", cursive;
   font-size: 4.5rem;
+  padding-top: 150px;
 }
 
 #links-div {
@@ -61,12 +66,12 @@ body {
   text-align: center;
 }
 
-.plant-desc {
-  font-size: 2rem;
-}
 .planets-container {
   width: 80%;
   border: 2px solid gray;
   margin: 10px;
-  padding-left: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

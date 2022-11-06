@@ -9,9 +9,10 @@ export default function SingleFilm() {
   useEffect(() => {
     const handleApi = async () => {
       const singleFilm = await axios.get(
-        `https://swapi.dev/api/planets/${singleFilmId}`
+        `https://swapi.dev/api/films/${singleFilmId}`
       );
-      console.log("data", singleFilm.data);
+
+      console.log("single film", singleFilm.data);
       setSingleFilm(singleFilm.data);
     };
     handleApi();
@@ -20,11 +21,10 @@ export default function SingleFilm() {
     <>
       {singleFilm && (
         <>
-          <h1>{singleFilm.name}</h1>
-          <h3>Population: {singleFilm.population}</h3>
-          <h3>Climate: {singleFilm.climate}</h3>
-          <h3>Terrain: {singleFilm.terrain}</h3>
-          <h3>Gravity: {singleFilm.gravity}</h3>
+          <h1>{singleFilm.title}</h1>
+          <h3>{singleFilm.opening_crawl}</h3>
+          <h3>Producer: {singleFilm.producer}</h3>
+          <h3>Release Date: {singleFilm.release_date}</h3>
         </>
       )}
     </>
