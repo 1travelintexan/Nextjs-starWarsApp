@@ -18,15 +18,19 @@ export default function SingleFilm() {
     handleApi();
   }, [singleFilmId]);
   return (
-    <>
+    <div id="single-film-container">
       {singleFilm && (
-        <>
+        <div id="single-film">
           <h1>{singleFilm.title}</h1>
           <h3>{singleFilm.opening_crawl}</h3>
-          <h3>Producer: {singleFilm.producer}</h3>
-          <h3>Release Date: {singleFilm.release_date}</h3>
-        </>
+          <div className="flex">
+            <h1>Producer:</h1> <h3>{singleFilm.producer}</h3>
+          </div>
+          <div className="flex">
+            <h1>Release Date:</h1> <h3>{singleFilm.release_date}</h3>
+          </div>
+        </div>
       )}
-    </>
+    </div>
   );
 }

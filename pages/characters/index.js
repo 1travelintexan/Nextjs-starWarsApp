@@ -26,7 +26,7 @@ export default function CharactersPage() {
       {characters &&
         characters.map((char) => {
           return (
-            <div key={v4()}>
+            <div key={v4()} id="characters">
               <Link href={`/characters/${char.id}`}>
                 <h3 className="character">{char.name}</h3>
               </Link>

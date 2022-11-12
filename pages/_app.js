@@ -16,6 +16,14 @@ function MyApp({ Component, pageProps }) {
           <h3>Home</h3>
         </div>
       </Link>
+      <div id="tie-fighter">
+        <Image
+          width={80}
+          height={80}
+          src={"/tie-fighter.png"}
+          alt="tie-fighter"
+        />
+      </div>
       <Component {...pageProps} />
     </>
   );

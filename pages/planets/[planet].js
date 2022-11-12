@@ -19,13 +19,25 @@ export default function Planet() {
   return (
     <>
       {planet && (
-        <>
-          <h1>{planet.name}</h1>
-          <h3>Population: {planet.population}</h3>
-          <h3>Climate: {planet.climate}</h3>
-          <h3>Terrain: {planet.terrain}</h3>
-          <h3>Gravity: {planet.gravity}</h3>
-        </>
+        <div id="single-planet">
+          <h1 id="planet-name">{planet.name}</h1>
+          <div className="flex">
+            <h1 className="single-planet-h1">Population:</h1>{" "}
+            <h3>{planet.population}</h3>
+          </div>
+          <div className="flex">
+            <h1 className="single-planet-h1">Climate:</h1>{" "}
+            <h3>{planet.climate}</h3>
+          </div>
+          <div className="flex">
+            <h1 className="single-planet-h1">Terrain:</h1>{" "}
+            <h3>{planet.terrain}</h3>
+          </div>
+          <div className="flex">
+            <h1 className="single-planet-h1">Gravity:</h1>{" "}
+            <h3> {planet.gravity}</h3>
+          </div>
+        </div>
       )}
     </>
   );
