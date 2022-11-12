@@ -7,9 +7,12 @@ export default function CharactersPage() {
   const [characters, setCharacters] = useState(null);
   useEffect(() => {
     const handleApi = async () => {
-      const characters = await axios.get("https://swapi.dev/api/people/");
+      const data = await fetch("https://swapi.dev/api/people/", {
+        method: "GET",
+      });
+      const characters = await data.json();
 
-      let charactersArr = characters.data.results.map((character) => {
+      let charactersArr = characters.results.map((character) => {
         let splitArr = character.url.split("/");
         let characterId = splitArr[splitArr.length - 2];
         return { name: character.name, id: characterId };

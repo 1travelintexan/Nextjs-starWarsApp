@@ -8,11 +8,11 @@ export default function Planet() {
   const [planet, setPlanet] = useState(null);
   useEffect(() => {
     const handleApi = async () => {
-      const planet = await axios.get(
-        `https://swapi.dev/api/planets/${planetId}`
-      );
-      console.log("planet", planet.data);
-      setPlanet(planet.data);
+      const data = await fetch(`https://swapi.dev/api/planets/${planetId}`, {
+        method: "GET",
+      });
+      const planet = await data.json();
+      setPlanet(planet);
     };
     handleApi();
   }, [planetId]);
